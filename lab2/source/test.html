@@ -1,0 +1,21 @@
+<button id="videoCancel" onclick="videoCancelFun()">videoCancel</button>
+<button id="audioCancel" onclick="audioCancelFun()">audioCancel</button>
+
+<script>
+    function videoCancelFun()
+    {
+        viedoTag=document.getElementById('videoPlayer')
+        if(viedoTag!=null)
+        {
+            viedoTag.src="cancel.mp4"
+        }
+    }
+    function audioCancelFun()
+    {
+        audioTag=document.getElementById('audioCancel')
+        if(audioTag!=null)
+        {
+            audioTag.src="cancel.mp3"
+        }
+    }
+</script>
