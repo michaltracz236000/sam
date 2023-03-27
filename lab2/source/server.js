@@ -3,7 +3,27 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-    var sendTags=""
+    var sendTags=`<button id="videoCancel" onclick="videoCancelFun()">videoCancel</button><br>
+    <button id="audioCancel" onclick="audioCancelFun()">audioCancel</button><br>
+    
+    <script>
+        function videoCancelFun()
+        {
+            viedoTag=document.getElementById('videoPlayer')
+            if(viedoTag!=null)
+            {
+                viedoTag.src="cancel.mp4"
+            }
+        }
+        function audioCancelFun()
+        {
+            audioTag=document.getElementById('audioPlayer')
+            if(audioTag!=null)
+            {
+                audioTag.src="cancel.mp3"
+            }
+        }
+    </script>`
     if (req.query.videoFile!=undefined)
         sendTags+='<video width="500" height="500" controls id="videoPlayer" src="'+req.query.videoFile+'">Nie udało się odtworzyc filmu</video>'
     if (req.query.audioFile!=undefined)
