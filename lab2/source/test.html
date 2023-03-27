@@ -1,5 +1,5 @@
-<button id="videoCancel" onclick="videoCancelFun()">videoCancel</button>
-<button id="audioCancel" onclick="audioCancelFun()">audioCancel</button>
+<button id="videoCancel" onclick="videoCancelFun()">videoCancel</button><br>
+<button id="audioCancel" onclick="audioCancelFun()">audioCancel</button><br>
 
 <script>
     function videoCancelFun()
@@ -12,7 +12,7 @@
     }
     function audioCancelFun()
     {
-        audioTag=document.getElementById('audioCancel')
+        audioTag=document.getElementById('audioPlayer')
         if(audioTag!=null)
         {
             audioTag.src="cancel.mp3"
