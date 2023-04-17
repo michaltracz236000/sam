@@ -54,6 +54,32 @@ app.get('/', (req, res) => {
                 i+=1;
             }
         }
+        function audioAddFun()
+        {
+            audioTag=document.getElementById('audioPlayer')
+            if(audioTag!=null)
+            {
+                table = document.getElementById("playlist_table");
+                row = table.insertRow(i);
+                row.insertCell(0).innerHTML=i;
+                row.insertCell(1).innerHTML=audioTag.src;
+                row.insertCell(2).innerHTML="Audio";
+                i+=1;
+            }
+        }
+        function imgAddFun()
+        {
+            imgTag=document.getElementById('posterImage')
+            if(imgTag!=null)
+            {
+                table = document.getElementById("playlist_table");
+                row = table.insertRow(i);
+                row.insertCell(0).innerHTML=i;
+                row.insertCell(1).innerHTML=imgTag.src;
+                row.insertCell(2).innerHTML="Image";
+                i+=1;
+            }
+        }
         
     </script>`;
     res.send(sendTags)
