@@ -20,7 +20,9 @@ app.get('/', (req, res) => {
     </table>
     <br><button id="videoCancel" onclick="videoCancelFun()">videoCancel</button><br>
     <button id="audioCancel" onclick="audioCancelFun()">audioCancel</button><br>
-    
+    <button id="audioAdd" onclick="audioAddFun()">audioAdd</button><br>
+    <button id="videoAdd" onclick="videoAddFun()">videoAdd</button><br>
+    <button id="imgAdd" onclick="imgAddFun()">imgAdd</button><br>
     <script>
         function videoCancelFun()
         {
