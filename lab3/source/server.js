@@ -10,7 +10,15 @@ app.get('/', (req, res) => {
         sendTags+='<audio controls id="audioPlayer" src="'+req.query.audioFile+'">Nie udało się odtworzyć audio</audio>'
     if(req.query.imgFile!=undefined)
         sendTags+='<img id="posterImage" src="'+req.query.imgFile+'">'
-    sendTags+=`<br><button id="videoCancel" onclick="videoCancelFun()">videoCancel</button><br>
+    sendTags+=`
+    <table id="playlist_table">
+    <tr>
+    <th>No.</th>
+    <th>URL</th>
+    <th>Type</th>
+    </tr>
+    </table>
+    <br><button id="videoCancel" onclick="videoCancelFun()">videoCancel</button><br>
     <button id="audioCancel" onclick="audioCancelFun()">audioCancel</button><br>
     
     <script>
