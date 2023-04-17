@@ -24,6 +24,7 @@ app.get('/', (req, res) => {
     <button id="videoAdd" onclick="videoAddFun()">videoAdd</button><br>
     <button id="imgAdd" onclick="imgAddFun()">imgAdd</button><br>
     <script>
+        i=1
         function videoCancelFun()
         {
             viedoTag=document.getElementById('videoPlayer')
@@ -40,6 +41,20 @@ app.get('/', (req, res) => {
                 audioTag.src="cancel.mp3"
             }
         }
+        function videoAddFun()
+        {
+            viedoTag=document.getElementById('videoPlayer')
+            if(viedoTag!=null)
+            {
+                table = document.getElementById("playlist_table");
+                row = table.insertRow(i);
+                row.insertCell(0).innerHTML=i;
+                row.insertCell(1).innerHTML=viedoTag.src;
+                row.insertCell(2).innerHTML="Video";
+                i+=1;
+            }
+        }
+        
     </script>`;
     res.send(sendTags)
 })
