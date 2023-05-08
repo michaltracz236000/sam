@@ -48,8 +48,8 @@ app.get('/', (req, res) => {
             if(viedoTag!=null)
             {
                 table = document.getElementById("playlist_table");
-                row = table.insertRow(i);
-                row.insertCell(0).innerHTML=i;
+                row = table.insertRow(table.rows.length);
+                row.insertCell(0).innerHTML=table.rows.length-1;
                 row.insertCell(1).innerHTML=viedoTag.src;
                 row.insertCell(2).innerHTML="Video";
                 i+=1;
@@ -61,8 +61,8 @@ app.get('/', (req, res) => {
             if(audioTag!=null)
             {
                 table = document.getElementById("playlist_table");
-                row = table.insertRow(i);
-                row.insertCell(0).innerHTML=i;
+                row = table.insertRow(table.rows.length);
+                row.insertCell(0).innerHTML=table.rows.length-1;
                 row.insertCell(1).innerHTML=audioTag.src;
                 row.insertCell(2).innerHTML="Audio";
                 i+=1;
@@ -74,8 +74,8 @@ app.get('/', (req, res) => {
             if(imgTag!=null)
             {
                 table = document.getElementById("playlist_table");
-                row = table.insertRow(i);
-                row.insertCell(0).innerHTML=i;
+                row = table.insertRow(table.rows.length);
+                row.insertCell(0).innerHTML=table.rows.length-1;
                 row.insertCell(1).innerHTML=imgTag.src;
                 row.insertCell(2).innerHTML="Image";
                 i+=1;
