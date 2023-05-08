@@ -59,6 +59,7 @@ app.get('/', (req, res) => {
                 row.insertCell(2).innerHTML="Video";
                 let btn = document.createElement('button');
                 btn.innerText = 'Delete';
+                btn.className = "removeRowButton";
                 btn.setAttribute('onclick', 'deleteRow(this)');
                 row.insertCell(3).appendChild(btn);
                 i+=1;
@@ -76,6 +77,7 @@ app.get('/', (req, res) => {
                 row.insertCell(2).innerHTML="Audio";
                 let btn = document.createElement('button');
                 btn.innerText = 'Delete';
+                btn.className = "removeRowButton";
                 btn.setAttribute('onclick', 'deleteRow(this)');
                 row.insertCell(3).appendChild(btn);
                 i+=1;
@@ -93,6 +95,7 @@ app.get('/', (req, res) => {
                 row.insertCell(2).innerHTML="Image";
                 let btn = document.createElement('button');
                 btn.innerText = 'Delete';
+                btn.className = "removeRowButton";
                 btn.setAttribute('onclick', 'deleteRow(this)');
                 row.insertCell(3).appendChild(btn);
                 i+=1;
