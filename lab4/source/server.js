@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
     <button id="imgAdd" onclick="imgAddFun()">Add image</button><br>
     <script>
         i=1
+        function deleteRow(toDelete)
+        {
+            
+        }
         function videoCancelFun()
         {
             viedoTag=document.getElementById('videoPlayer')
@@ -52,6 +56,10 @@ app.get('/', (req, res) => {
                 row.insertCell(0).innerHTML=table.rows.length-1;
                 row.insertCell(1).innerHTML=viedoTag.src;
                 row.insertCell(2).innerHTML="Video";
+                let btn = document.createElement('button');
+                btn.innerText = 'Delete';
+                btn.setAttribute('onclick', 'deleteRow(this)');
+                row.insertCell(3).appendChild(button);
                 i+=1;
             }
         }
