@@ -31,6 +31,16 @@ app.get('/', (req, res) => {
             var row = toDelete.parentNode.parentNode;
             row.parentNode.removeChild(row);
         }
+        function upRow(toUp)
+        {
+            var row = toUp.parentNode.parentNode;
+            //var rows = 
+        }
+        function downRow(toDown)
+        {
+            var row = toDown.parentNode.parentNode;
+            
+        }
         function videoCancelFun()
         {
             viedoTag=document.getElementById('videoPlayer')
