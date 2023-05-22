@@ -69,6 +69,12 @@ app.get('/', (req, res) => {
                 btn1.className = "moveRowUpButton";
                 btn1.setAttribute('onclick', 'upRow(this)');
                 row.insertCell(3).appendChild(btn1);
+
+                let btn2 = document.createElement('button');
+                btn2.innerText = 'Down';
+                btn2.className = "moveRowDownButton";
+                btn2.setAttribute('onclick', 'downRow(this)');
+                row.insertCell(3).appendChild(btn2);
                 i+=1;
             }
         }
@@ -93,6 +99,12 @@ app.get('/', (req, res) => {
                 btn1.className = "moveRowUpButton";
                 btn1.setAttribute('onclick', 'upRow(this)');
                 row.insertCell(3).appendChild(btn1);
+
+                let btn2 = document.createElement('button');
+                btn2.innerText = 'Down';
+                btn2.className = "moveRowDownButton";
+                btn2.setAttribute('onclick', 'downRow(this)');
+                row.insertCell(3).appendChild(btn2);
                 i+=1;
             }
         }
@@ -118,6 +130,12 @@ app.get('/', (req, res) => {
                 btn1.className = "moveRowUpButton";
                 btn1.setAttribute('onclick', 'upRow(this)');
                 row.insertCell(3).appendChild(btn1);
+
+                let btn2 = document.createElement('button');
+                btn2.innerText = 'Down';
+                btn2.className = "moveRowDownButton";
+                btn2.setAttribute('onclick', 'downRow(this)');
+                row.insertCell(3).appendChild(btn2);
                 i+=1;
             }
         }
