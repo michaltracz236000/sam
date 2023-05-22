@@ -57,11 +57,18 @@ app.get('/', (req, res) => {
                 row.insertCell(0).innerHTML=i;
                 row.insertCell(1).innerHTML=viedoTag.src;
                 row.insertCell(2).innerHTML="Video";
+
                 let btn = document.createElement('button');
                 btn.innerText = 'Delete';
                 btn.className = "removeRowButton";
                 btn.setAttribute('onclick', 'deleteRow(this)');
                 row.insertCell(3).appendChild(btn);
+
+                let btn1 = document.createElement('button');
+                btn1.innerText = 'Up';
+                btn1.className = "moveRowUpButton";
+                btn1.setAttribute('onclick', 'upRow(this)');
+                row.insertCell(3).appendChild(btn1);
                 i+=1;
             }
         }
@@ -80,6 +87,12 @@ app.get('/', (req, res) => {
                 btn.className = "removeRowButton";
                 btn.setAttribute('onclick', 'deleteRow(this)');
                 row.insertCell(3).appendChild(btn);
+
+                let btn1 = document.createElement('button');
+                btn1.innerText = 'Up';
+                btn1.className = "moveRowUpButton";
+                btn1.setAttribute('onclick', 'upRow(this)');
+                row.insertCell(3).appendChild(btn1);
                 i+=1;
             }
         }
@@ -98,6 +111,13 @@ app.get('/', (req, res) => {
                 btn.className = "removeRowButton";
                 btn.setAttribute('onclick', 'deleteRow(this)');
                 row.insertCell(3).appendChild(btn);
+                
+                
+                let btn1 = document.createElement('button');
+                btn1.innerText = 'Up';
+                btn1.className = "moveRowUpButton";
+                btn1.setAttribute('onclick', 'upRow(this)');
+                row.insertCell(3).appendChild(btn1);
                 i+=1;
             }
         }
