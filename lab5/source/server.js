@@ -34,7 +34,15 @@ app.get('/', (req, res) => {
         function upRow(toUp)
         {
             var row = toUp.parentNode.parentNode;
-            //var rows = 
+            var rows = row.parentNode.rows;
+            if(row.rowIndex==1)
+            {
+                row.parentNode.insertBefore(rows[row.rowIndex],rows[rows.length-1].nextSibling);
+            }
+            else
+            {
+                row.parentNode.insertBefore(rows[row.rowIndex],rows[row.rowIndex-1]);
+            }
         }
         function downRow(toDown)
         {
