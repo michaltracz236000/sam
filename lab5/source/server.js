@@ -88,19 +88,20 @@ app.get('/', (req, res) => {
                 btn.innerText = 'Delete';
                 btn.className = "removeRowButton";
                 btn.setAttribute('onclick', 'deleteRow(this)');
-                row.insertCell(3).appendChild(btn);
+                var tempCell=row.insertCell(3);
+                tempCell.appendChild(btn);
 
                 let btn1 = document.createElement('button');
                 btn1.innerText = 'Up';
                 btn1.className = "moveRowUpButton";
                 btn1.setAttribute('onclick', 'upRow(this)');
-                row.insertCell(3).appendChild(btn1);
+                tempCell.appendChild(btn1);
 
                 let btn2 = document.createElement('button');
                 btn2.innerText = 'Down';
                 btn2.className = "moveRowDownButton";
                 btn2.setAttribute('onclick', 'downRow(this)');
-                row.insertCell(3).appendChild(btn2);
+                tempCell.appendChild(btn2);
                 i+=1;
             }
         }
