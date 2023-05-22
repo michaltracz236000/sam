@@ -47,7 +47,15 @@ app.get('/', (req, res) => {
         function downRow(toDown)
         {
             var row = toDown.parentNode.parentNode;
-            
+            var rows = row.parentNode.rows;
+            if(row.rowIndex==rows.length-1)
+            {
+                row.parentNode.insertBefore(rows[row.rowIndex],rows[1]);
+            }
+            else
+            {
+                row.parentNode.insertBefore(rows[row.rowIndex+1],rows[row.rowIndex]);
+            }
         }
         function videoCancelFun()
         {
