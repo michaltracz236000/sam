@@ -26,6 +26,39 @@ app.get('/', (req, res) => {
     <button id="imgAdd" onclick="imgAddFun()">Add image</button><br>
     <script>
         i=1
+        function videoPlayFun()
+        {
+            viedoTag=document.getElementById('videoPlayer')
+            if(viedoTag!=null)
+            {
+                viedoTag.play();
+            }
+        }
+        function videoPauseFun()
+        {
+            viedoTag=document.getElementById('videoPlayer')
+            if(viedoTag!=null)
+            {
+                viedoTag.pause();
+            }
+        }
+
+        function audioPlayFun()
+        {
+            audioTag=document.getElementById('audioPlayer')
+            if(audioTag!=null)
+            {
+                audioTag.play();
+            }
+        }
+        function audioPauseFun()
+        {
+            audioTag=document.getElementById('audioPlayer')
+            if(audioTag!=null)
+            {
+                audioTag.pause();
+            }
+        }
         function deleteRow(toDelete)
         {
             var row = toDelete.parentNode.parentNode;
