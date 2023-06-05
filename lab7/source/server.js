@@ -5,9 +5,9 @@ const app = express()
 app.get('/', (req, res) => {
     var sendTags="";
     if (req.query.videoFile!=undefined)
-        sendTags+='<video width="500" height="500" controls id="videoPlayer" src="'+req.query.videoFile+'">Nie udało się odtworzyc filmu</video><br><button id="videoPlay">Play Video</button><button id="videoPause">Pause Video</button><br>'
+        sendTags+='<video width="500" height="500" controls id="videoPlayer" src="'+req.query.videoFile+'">Nie udało się odtworzyc filmu</video><br><button id="videoPlay" onclick="videoPlayFun()">Play Video</button><button id="videoPause" onclick="videoPauseFun()">Pause Video</button><br>'
     if (req.query.audioFile!=undefined)
-        sendTags+='<audio controls id="audioPlayer" src="'+req.query.audioFile+'">Nie udało się odtworzyć audio</audio>'
+        sendTags+='<audio controls id="audioPlayer" src="'+req.query.audioFile+'">Nie udało się odtworzyć audio</audio><br><button id="audioPlay" onclick="audioPlayFun()">Play Audio</button><button id="audioPause" onclick="audioPauseFun()">Pause Audio</button><br>'
     if(req.query.imgFile!=undefined)
         sendTags+='<img id="posterImage" src="'+req.query.imgFile+'">'
     sendTags+=`
